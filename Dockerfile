@@ -34,4 +34,6 @@ ADD files/test /usr/share/nginx/html/test
 RUN mkdir /etc/service/nginx
 ADD runit/nginx.sh /etc/service/nginx/run
 
+ADD config/nginx.conf /etc/nginx/nginx.conf
+
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
